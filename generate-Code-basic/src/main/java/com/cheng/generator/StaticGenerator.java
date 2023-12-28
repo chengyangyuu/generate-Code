@@ -4,6 +4,9 @@ import cn.hutool.core.io.FileUtil;
 
 import java.io.File;
 
+/**
+ *静态资源生成器
+ */
 public class StaticGenerator {
     public static void main(String[] args) {
         //获取整个项目的根目录(basic)
