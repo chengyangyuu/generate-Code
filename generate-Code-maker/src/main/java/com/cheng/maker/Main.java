@@ -1,6 +1,6 @@
-package com.cheng;
+package com.cheng.maker;
 
-import com.cheng.cli.CommandExecutor;
+import com.cheng.maker.cli.CommandExecutor;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.

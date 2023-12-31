@@ -1,10 +1,9 @@
-package com.cheng.cli.command;
+package com.cheng.maker.cli.command;
 
 import cn.hutool.core.bean.BeanUtil;
-import com.cheng.generator.MainGenerator;
-import com.cheng.model.MainTemplateConfig;
+import com.cheng.maker.generator.FileGenerator;
+import com.cheng.maker.model.DataModel;
 import lombok.Data;
-import picocli.CommandLine;
 import picocli.CommandLine.Command;
 
 import java.util.concurrent.Callable;
@@ -35,11 +34,11 @@ public class GenerateCommand implements Callable<Integer> {
     @Override
     public Integer call() throws Exception {
         //创建数据模型
-        MainTemplateConfig mainTemplateConfig = new MainTemplateConfig();
-        BeanUtil.copyProperties(this, mainTemplateConfig);
-        MainGenerator.doGenerate(mainTemplateConfig);
-        System.out.println("配置信息" + mainTemplateConfig);
-        MainGenerator.doGenerate(mainTemplateConfig);
+        DataModel dataModel = new DataModel();
+        BeanUtil.copyProperties(this, dataModel);
+        FileGenerator.doGenerate(dataModel);
+        System.out.println("配置信息" + dataModel);
+        FileGenerator.doGenerate(dataModel);
         return 0;
     }
 

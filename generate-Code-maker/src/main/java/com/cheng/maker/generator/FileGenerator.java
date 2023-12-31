@@ -1,24 +1,24 @@
-package com.cheng.generator;
+package com.cheng.maker.generator;
 
-import com.cheng.model.MainTemplateConfig;
+import com.cheng.maker.model.DataModel;
 import freemarker.template.TemplateException;
 
 import java.io.File;
 import java.io.IOException;
 
-import static com.cheng.generator.StaticGenerator.copyFileByHutool;
+import static com.cheng.maker.generator.StaticFileGenerator.copyFileByHutool;
 
 /**
  * 核心生成器
  */
-public class MainGenerator {
+public class FileGenerator {
     public static void main(String[] args) throws TemplateException, IOException {
         //创建数据模型
-        MainTemplateConfig mainTemplateConfig = new MainTemplateConfig();
-        mainTemplateConfig.setAuthor("ben");
-        mainTemplateConfig.setLoop(false);
-        mainTemplateConfig.setOutputText("求和结果");
-        doGenerate(mainTemplateConfig);
+        DataModel dataModel = new DataModel();
+        dataModel.setAuthor("ben");
+        dataModel.setLoop(false);
+        dataModel.setOutputText("求和结果");
+        doGenerate(dataModel);
     }
     public static void doGenerate(Object model) throws TemplateException, IOException {
         //D:\code\generator-Code\generator-Code-basic
@@ -29,13 +29,13 @@ public class MainGenerator {
         //输入路径 ACM程序路径
 //        D:\code\generator-Code\generator-Code-demo-project\acm-template
         String srcPath = new File(projecttFile, "generator-Code-demo-project/acm-template").getAbsolutePath();
-        copyFileByHutool(srcPath, projectPath);
+        StaticFileGenerator.copyFileByHutool(srcPath, projectPath);
 
         //生成动态文件  位置指定到 静态中
         //D:\code\generator-Code\generator-Code-basic\src/main/resources/templates
         String inputPath = projectPath + File.separator + "src/main/resources/templates/MainTemplate.java.ftl";
         String outputPath = projectPath + File.separator + "acm-template/src/com/cheng/acm/MainTemplate.java";
 
-        DynamicGenerator.doGenerate(inputPath,outputPath,model);
+        DynamicFileGenerator.doGenerate(inputPath,outputPath,model);
     }
 }

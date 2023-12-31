@@ -1,4 +1,4 @@
-package com.cheng.cli.command;
+package com.cheng.maker.cli.command;
 
 import cn.hutool.core.io.FileUtil;
 import picocli.CommandLine;
