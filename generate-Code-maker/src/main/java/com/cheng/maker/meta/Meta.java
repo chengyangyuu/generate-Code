@@ -5,9 +5,11 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+
 @NoArgsConstructor
 @Data
 public class Meta {
+
 
     private String name;
     private String description;
@@ -24,7 +26,7 @@ public class Meta {
         private String inputRootPath;
         private String outputRootPath;
         private String type;
-        private List<FileInfo> FileInfo;
+        private List<FileInfo> files;
 
         @NoArgsConstructor
         @Data
@@ -39,7 +41,7 @@ public class Meta {
     @NoArgsConstructor
     @Data
     public static class ModelConfig {
-        private List<ModelInfo> ModelInfo;
+        private List<ModelInfo> models;
 
         @NoArgsConstructor
         @Data

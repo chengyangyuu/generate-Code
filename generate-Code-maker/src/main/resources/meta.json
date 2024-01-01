@@ -55,7 +55,7 @@
         "fieldName": "author",
         "type": "String",
         "description": "作者注释",
-        "defaultValue": "yupi",
+        "defaultValue": "cheng",
         "abbr": "a"
       },
       {
