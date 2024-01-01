@@ -1,7 +1,7 @@
 package com.cheng.maker.cli.command;
 
 import cn.hutool.core.bean.BeanUtil;
-import com.cheng.maker.generator.FileGenerator;
+import com.cheng.maker.generator.file.FileGenerator;
 import com.cheng.maker.model.DataModel;
 import lombok.Data;
 import picocli.CommandLine.Command;

@@ -1,4 +1,4 @@
-package com.cheng.maker.generator;
+package com.cheng.maker.generator.file;
 
 import cn.hutool.core.io.FileUtil;
 import com.cheng.maker.model.DataModel;

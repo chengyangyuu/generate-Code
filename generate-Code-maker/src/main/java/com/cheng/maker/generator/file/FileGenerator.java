@@ -1,4 +1,4 @@
-package com.cheng.maker.generator;
+package com.cheng.maker.generator.file;
 
 import com.cheng.maker.model.DataModel;
 import freemarker.template.TemplateException;
@@ -6,7 +6,7 @@ import freemarker.template.TemplateException;
 import java.io.File;
 import java.io.IOException;
 
-import static com.cheng.maker.generator.StaticFileGenerator.copyFileByHutool;
+import static com.cheng.maker.generator.file.StaticFileGenerator.copyFileByHutool;
 
 /**
  * 核心生成器

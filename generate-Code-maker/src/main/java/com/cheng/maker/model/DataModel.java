@@ -3,7 +3,6 @@ package com.cheng.maker.model;
 import lombok.Data;
 
 
-
 /**
  * 动态模板参数配置
  */
@@ -18,12 +17,12 @@ public class DataModel {
     /**
      * 作者注释
      */
-    private String author="";
+    private String author = "";
 
     /**
      * 输出信息
      */
-    private String outputText="sum = ";
+    private String outputText = "sum = ";
 
 
 }
