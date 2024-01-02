@@ -22,7 +22,7 @@ public class GenerateCommand implements Callable<Integer> {
     /**
      * 作者注释
      */
-    @Option(names = {"-a", "--author"}, arity = "0..1", description = "作者", interactive = true, echo = true)
+    @Option(names = {"-DynamicGenerator.java.ftl", "--author"}, arity = "0..1", description = "作者", interactive = true, echo = true)
     private String author = "";
 
     /**

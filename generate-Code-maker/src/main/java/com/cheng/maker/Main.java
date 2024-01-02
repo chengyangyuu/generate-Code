@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
 //        args = new String[]{"config"};
 //        args = new String[]{"list"};
-        args = new String[]{"generator","-l","-o","-a"};
+        args = new String[]{"generator","-l","-o","-DynamicGenerator.java.ftl"};
         CommandExecutor commandExecutor = new CommandExecutor();
         commandExecutor.doExecute(args);
     }
