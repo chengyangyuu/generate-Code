@@ -1,4 +1,4 @@
-package ${basePackage}.generator;
+package com.cheng.generator;
 
 import com.cheng.model.MainTemplateConfig;
 import freemarker.template.Configuration;

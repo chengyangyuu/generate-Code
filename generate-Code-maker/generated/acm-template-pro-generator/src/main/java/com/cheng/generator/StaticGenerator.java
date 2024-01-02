@@ -1,4 +1,4 @@
-package ${basePackage}.generator;
+package com.cheng.generator;
 
 import cn.hutool.core.io.FileUtil;
 

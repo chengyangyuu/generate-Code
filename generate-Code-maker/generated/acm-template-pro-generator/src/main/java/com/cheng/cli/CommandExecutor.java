@@ -1,12 +1,12 @@
-package com.cheng.maker.cli;
+package com.cheng.cli;
 
-import com.cheng.maker.cli.command.ConfigCommand;
-import com.cheng.maker.cli.command.GenerateCommand;
-import com.cheng.maker.cli.command.ListCommand;
+import com.cheng.cli.command.ConfigCommand;
+import com.cheng.cli.command.GenerateCommand;
+import com.cheng.cli.command.ListCommand;
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 
-@Command(name = "cheng", mixinStandardHelpOptions = true)
+@Command(name = "acm-template-pro-generator", mixinStandardHelpOptions = true)
 public class CommandExecutor implements Runnable {
     private final CommandLine commandLine;
 

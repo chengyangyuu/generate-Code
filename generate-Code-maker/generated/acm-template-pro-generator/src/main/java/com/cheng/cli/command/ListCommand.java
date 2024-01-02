@@ -1,4 +1,4 @@
-package com.cheng.maker.cli.command;
+package com.cheng.cli.command;
 
 import cn.hutool.core.io.FileUtil;
 import picocli.CommandLine;
@@ -18,14 +18,8 @@ public class ListCommand implements Runnable{
 
     @Override
     public void run() {
-        //D:\code\generator-Code\generator-Code-basic
-        String projectPath = System.getProperty("user.dir");
-        //获取父项目的路径(gene-Code)
-        File projecttFile = new File(projectPath).getParentFile();
 
-        //输入路径 ACM程序路径
-//        D:\code\generator-Code\generator-Code-demo-project\acm-template
-        String srcPath = new File(projecttFile, "generator-Code-demo-project/acm-template").getAbsolutePath();
+        String srcPath = "/generate-Code/generate-Code-demo-project/acm-template-pro";
         List<File> files = FileUtil.loopFiles(srcPath);
         for (File file:files){
             System.out.println(file);
