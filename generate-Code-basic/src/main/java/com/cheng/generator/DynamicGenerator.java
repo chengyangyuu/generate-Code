@@ -48,7 +48,9 @@ public class DynamicGenerator {
         //指定生成的文件  "MainTemplate.java"
         Writer out = new FileWriter(outPutPath);
         //生成
-        template.process(model, out); // 生成文件后别忘了关闭哦 out.close();
+        template.process(model, out);
+        // 生成文件后别忘了关闭哦
+        out.close();
 
     }
 }

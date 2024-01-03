@@ -12,7 +12,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class MainGenerator {
-    public static void main(String[] args) throws TemplateException, IOException {
+    public static void main(String[] args) throws TemplateException, IOException, InterruptedException {
         Meta meta = MetaManager.getObject();
         System.out.println(meta);
         //D:\code\generator-Code\generator-Code-maker
@@ -34,9 +34,10 @@ public class MainGenerator {
 
         String inputFilePath;
         String outputFilePath;
+
         //Data.model
         inputFilePath = inputResourcePath + File.separator + "templates/java/model/DataModel.java.ftl";
-        outputFilePath = outputBasePackageJavaPath + "/model/Data.Model.java";
+        outputFilePath = outputBasePackageJavaPath + "/model/DataModel.java";
         DynamicFileGenerator.doGenerate(inputFilePath, outputFilePath, meta);
 
         //cli/command/GenerateCommand.java.ftl
@@ -72,13 +73,20 @@ public class MainGenerator {
         // generator.MainGenerator
         inputFilePath = inputResourcePath + File.separator + "templates/java/generator/MainGenerator.java.ftl";
         outputFilePath = outputBasePackageJavaPath + "/generator/MainGenerator.java";
-        DynamicFileGenerator.doGenerate(inputFilePath , outputFilePath, meta); 
+        DynamicFileGenerator.doGenerate(inputFilePath , outputFilePath, meta);
 
         // generator.StaticGenerator
         inputFilePath = inputResourcePath + File.separator + "templates/java/generator/StaticGenerator.java.ftl";
         outputFilePath = outputBasePackageJavaPath + "/generator/StaticGenerator.java";
         DynamicFileGenerator.doGenerate(inputFilePath , outputFilePath, meta);
 
+        // pom
+        inputFilePath = inputResourcePath + File.separator + "templates/pom.xml.ftl";
+        outputFilePath = outputPath +File.separator+ "pom.xml";
+        DynamicFileGenerator.doGenerate(inputFilePath , outputFilePath, meta);
+
+        //构建jar包
+        JarGenerator.doGenerate(outputPath);
     }
 
 }

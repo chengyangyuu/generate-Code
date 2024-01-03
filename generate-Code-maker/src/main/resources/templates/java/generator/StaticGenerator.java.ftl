@@ -8,20 +8,6 @@ import java.io.File;
  *静态资源生成器
  */
 public class StaticGenerator {
-    public static void main(String[] args) {
-        //获取整个项目的根目录(basic)
-//        D:\code\generator-Code\generator-Code-basic
-        String projectPath = System.getProperty("user.dir");
-
-        //获取父项目的路径(gene-Code)
-        File projecttFile = new File(projectPath).getParentFile();
-
-        //输入路径 ACM程序路径
-//        D:\code\generator-Code\generator-Code-demo-project\acm-template
-        String srcPath = new File(projecttFile, "generator-Code-demo-project/acm-template").getAbsolutePath();
-
-        copyFileByHutool(srcPath, projectPath);
-    }
 
     /**
      * Params:
